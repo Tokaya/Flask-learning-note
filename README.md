@@ -11,7 +11,7 @@ Flask主要有两个依赖：
                         $ cd flasky
                         $ git checkout 1a
                         $ virtualenv venv
-                        $  venv\Scripts\activate
+激活虚拟环境             $  venv\Scripts\activate
 回到全局 Python 解释器中：$ deactivate
                         $ pip install flask
 检查是否正确安装flask    (venv) $ python >>> import flask >>>
@@ -48,21 +48,24 @@ teardown_request• ：注册一个函数，即使有未处理的异常抛出，
 3.1.2 Jinja2 能识别所有类型的变量，甚至是一些复杂的类型，例如列表、字典和对象。在模板 中使用变量的一些示例如下：
 ```HTML
 <p>A value from a dictionary: {{ mydict['key'] }}.</p>
-<p>A value from a list: {{ mylist[3] }}.
-</p> <p>A value from a list, with a variable index: {{ mylist[myintvar] }}.
-</p> <p>A value from an object's method: {{ myobj.somemethod() }}.</p>
+<p>A value from a list: {{ mylist[3] }}.</p>
+<p>A value from a list, with a variable index: {{ mylist[myintvar] }}.</p>
+<p>A value from an object's method: {{ myobj.somemethod() }}.</p>
 ```
 ```python
 Jinja2过滤器：
-safe 渲染值时不转义
-capitalize 把值的首字母转换成大写，其他字母转换成小写
-lower 把值转换成小写形式
-upper 把值转换成大写形式
-title 把值中每个单词的首字母都转换成大写
-trim 把值的首尾空格去掉
-striptags 渲染之前把值中所有的
-HTML 标签都删掉
-完整过滤器列表 http://jinja.pocoo.org/docs/templates/#builtin-filters
+    safe 渲染值时不转义
+    capitalize 把值的首字母转换成大写，其他字母转换成小写
+    lower 把值转换成小写形式
+    upper 把值转换成大写形式
+    title 把值中每个单词的首字母都转换成大写
+    trim 把值的首尾空格去掉
+    striptags 渲染之前把值中所有的
+    HTML 标签都删掉
+    完整过滤器列表 http://jinja.pocoo.org/docs/templates/#builtin-filters
 ```
+3.1.3 控制结构
+* base模版
 
-3.1.3
+3.2 Flask-Bootstrap **可再阅读**
+3.3 错误页面 404/500
